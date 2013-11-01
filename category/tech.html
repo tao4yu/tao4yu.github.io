@@ -72,26 +72,32 @@ by <a class="url fn" href="/author/tao4yu.html">Tao4Yu</a>
 <ul>
 <li>下载jdk，去到Oracle官网下载jdk安装包（jdk-7u25-linux-x64.gz） </li>
 <li>安装jdk，利用命令 " tar -zxv -f  jdk-7u25-linux-x64.gz " 将jdk安装至 /usr/local/lib目录  </li>
-<li>设置环境变量，利用vi编辑配置文件/etc/profile(" vi /etc/profile")，增加如下配置： <br />
-    #set Java Environment
-    export JAVA_HOME=/usr/local/lib/jdk1.7.0_25
-    export CLASSPATH=".:$JAVA_HOME/lib:$CLASSPATH"
-    export PATH="$JAVA_HOME/bin:$PATH"  </li>
-<li>测试jdk的安装配置：" java -version "。   </li>
+<li>
+<p>设置环境变量，利用vi编辑配置文件/etc/profile(" vi /etc/profile")，增加如下配置：   </p>
+<h1>set Java Environment</h1>
+<p>export JAVA_HOME=/usr/local/lib/jdk1.7.0_25
+export CLASSPATH=".:$JAVA_HOME/lib:$CLASSPATH"
+export PATH="$JAVA_HOME/bin:$PATH"  </p>
+</li>
+<li>
+<p>测试jdk的安装配置：" java -version "。   </p>
+</li>
 </ul>
 <h3>二、tomcat7的安装配置</h3>
 <ul>
 <li>下载tomcat，去到apache官网下载tomcat7的安装包（apache-tomcat-7.0.42.tar.gz）   </li>
 <li>安装tomcat，利用命令 “ tar -zxv -f  apache-tomcat-7.0.42.tar.gz ” 将tomcat7安装至 /usr/local/lib目录 </li>
-<li>配置tomcat（可选），在此仅配置tomcat管理用户，“ vi  /usr/local/libapache-tomcat-7.0.42/conf/tomcat-users.xml ”增加如下配置：  <br />
-    :::html
-    <role rolename="admin-gui"/>
-        <role rolename="admin-script"/>
-        <role rolename="manager-gui"/>
-        <role rolename="manager-script"/>
-        <role rolename="manager-jmx"/>
-        <role rolename="manager-status"/>
-        <user username="admin" password="admin" roles="manager-gui,manager-script,manager-jmx,manager-status,admin-script,admin-gui"/>  </li>
+<li>
+<p>配置tomcat（可选），在此仅配置tomcat管理用户，“ vi  /usr/local/libapache-tomcat-7.0.42/conf/tomcat-users.xml ”增加如下配置：</p>
+<p>:::html
+<role rolename="admin-gui"/>
+    <role rolename="admin-script"/>
+    <role rolename="manager-gui"/>
+    <role rolename="manager-script"/>
+    <role rolename="manager-jmx"/>
+    <role rolename="manager-status"/>
+    <user username="admin" password="admin" roles="manager-gui,manager-script,manager-jmx,manager-status,admin-script,admin-gui"/>  </p>
+</li>
 </ul>
 <h3>三、mysql安装配置（ 默认mysql在安装centos时已选择安装了，现主要关注其配置。）</h3>
 <ul>
@@ -104,7 +110,7 @@ by <a class="url fn" href="/author/tao4yu.html">Tao4Yu</a>
     default-character-set=utf8<br />
 在my.cnf中增加[client]片段，并增加配置： 
     default-character-set=utf8  </li>
-<li>建立数据库：" create database DB_NAME default character set utf8"</li>
+<li>建立数据库：" create database DB_NAME default character set utf8 "</li>
 </ul></div>
         <hr />
     </div>
