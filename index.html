@@ -90,37 +90,37 @@ export PATH="$JAVA_HOME/bin:$PATH"      </p>
 <li>
 <p>配置tomcat（可选），在此仅配置tomcat管理用户，<code>vi  /usr/local/libapache-tomcat-7.0.42/conf/tomcat-users.xml</code>增加如下配置：</p>
 <p>:::html
-<role rolename="admin-gui"/>
-<role rolename="admin-script"/>
-<role rolename="manager-gui"/>
-<role rolename="manager-script"/>
-<role rolename="manager-jmx"/>
-<role rolename="manager-status"/>
+<role rolename="admin-gui"/>  <br />
+<role rolename="admin-script"/> 
+<role rolename="manager-gui"/><br />
+<role rolename="manager-script"/> <br />
+<role rolename="manager-jmx"/><br />
+<role rolename="manager-status"/> <br />
 <user username="admin" password="admin" roles="manager-gui,manager-script,manager-jmx,manager-status,admin-script,admin-gui"/>  </p>
 </li>
 </ul>
 <h3>三、mysql安装配置（ 默认mysql在安装centos时已选择安装了，现主要关注其配置。）</h3>
 <ul>
 <li>
-<p>查看mysql启动状态：</p>
-<p>/etc/init.d/mysqld status</p>
+<p>查看mysql启动状态：    </p>
+<p>/etc/init.d/mysqld status   </p>
 </li>
 <li>
 <p>启动mysql：</p>
-<p>/etc/init.d/mysqld start    </p>
+<p>/etc/init.d/mysqld start        </p>
 </li>
 <li>
 <p>mysql安装后，用root用户登陆，默认密码为空，直接登录：</p>
-<p>mysql </p>
+<p>mysql   </p>
 </li>
 <li>
 <p>设置root密码：</p>
-<p>/usr/bin/mysqladmin -u root password '须设置的密码'   </p>
+<p>/usr/bin/mysqladmin -u root password '须设置的密码'       </p>
 </li>
 <li>
 <p>设置密码后，重新登陆：<code>mysql -u root -p</code>，提示输入密码，输入上一步设置的密码即可登陆。 <br />
 更改默认字符集为utf-8。打开配置文件，<code>vi /etc/my.cnf</code>，在[mysqld]下增加如下配置:   </p>
-<p>default-character-set=utf8  </p>
+<p>default-character-set=utf8      </p>
 </li>
 </ul>
 <p>在my.cnf中增加[client]片段，并增加配置：</p>
@@ -131,7 +131,7 @@ export PATH="$JAVA_HOME/bin:$PATH"      </p>
 <ul>
 <li>
 <p>建立数据库：</p>
-<p>create database DB_NAME default character set utf8 </p>
+<p>create database DB_NAME default character set utf8  </p>
 </li>
 </ul></div>
         <hr />
