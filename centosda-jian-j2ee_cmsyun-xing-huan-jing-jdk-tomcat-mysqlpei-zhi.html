@@ -65,9 +65,9 @@ by <a class="url fn" href="/author/tao4yu.html">Tao4Yu</a>
 <h3>一、jdk1.7的安装配置</h3>
 <ul>
 <li>下载jdk，去到Oracle官网下载jdk安装包（jdk-7u25-linux-x64.gz） </li>
-<li>安装jdk，利用命令 " tar -zxv -f  jdk-7u25-linux-x64.gz " 将jdk安装至 /usr/local/lib目录  </li>
+<li>安装jdk，利用命令 <code>tar -zxv -f  jdk-7u25-linux-x64.gz</code>将jdk安装至 /usr/local/lib目录    </li>
 <li>
-<p>设置环境变量，利用vi编辑配置文件/etc/profile(" vi /etc/profile")，增加如下配置：   </p>
+<p>设置环境变量，利用vi编辑配置文件<code>/etc/profile(" vi /etc/profile")</code>，增加如下配置： </p>
 <h1>set Java Environment</h1>
 <p>export JAVA_HOME=/usr/local/lib/jdk1.7.0_25
 export CLASSPATH=".:$JAVA_HOME/lib:$CLASSPATH"
@@ -80,9 +80,9 @@ export PATH="$JAVA_HOME/bin:$PATH"  </p>
 <h3>二、tomcat7的安装配置</h3>
 <ul>
 <li>下载tomcat，去到apache官网下载tomcat7的安装包（apache-tomcat-7.0.42.tar.gz）   </li>
-<li>安装tomcat，利用命令 “ tar -zxv -f  apache-tomcat-7.0.42.tar.gz ” 将tomcat7安装至 /usr/local/lib目录 </li>
+<li>安装tomcat，利用命令 <code>tar -zxv -f  apache-tomcat-7.0.42.tar.gz</code> 将tomcat7安装至 /usr/local/lib目录   </li>
 <li>
-<p>配置tomcat（可选），在此仅配置tomcat管理用户，“ vi  /usr/local/libapache-tomcat-7.0.42/conf/tomcat-users.xml ”增加如下配置：</p>
+<p>配置tomcat（可选），在此仅配置tomcat管理用户，<code>vi  /usr/local/libapache-tomcat-7.0.42/conf/tomcat-users.xml</code>增加如下配置：</p>
 <p>:::html
 <role rolename="admin-gui"/>
 <role rolename="admin-script"/>
@@ -95,21 +95,37 @@ export PATH="$JAVA_HOME/bin:$PATH"  </p>
 </ul>
 <h3>三、mysql安装配置（ 默认mysql在安装centos时已选择安装了，现主要关注其配置。）</h3>
 <ul>
-<li>查看mysql启动状态：“ /etc/init.d/mysqld status”    </li>
-<li>启动mysql：“ /etc/init.d/mysqld start” </li>
-<li>mysql安装后，用root用户登陆，默认密码为空，直接登录：“mysql ” </li>
 <li>
-<p>设置root密码：/usr/bin/mysqladmin -u root password '须设置的密码'  </p>
+<p>查看mysql启动状态：</p>
+<p>/etc/init.d/mysqld status</p>
 </li>
 <li>
-<p>设置密码后，重新登陆：" mysql -u root -p"，提示输入密码，输入上一步设置的密码即可登陆。 <br />
-更改默认字符集为utf-8。打开配置文件，" vi /etc/my.cnf "，在[mysqld]下增加如下配置: <br />
-    default-character-set=utf8<br />
-在my.cnf中增加[client]片段，并增加配置： 
-    default-character-set=utf8  </p>
+<p>启动mysql：</p>
+<p>/etc/init.d/mysqld start    </p>
 </li>
 <li>
-<p>建立数据库：" create database DB_NAME default character set utf8 "</p>
+<p>mysql安装后，用root用户登陆，默认密码为空，直接登录：</p>
+<p>mysql </p>
+</li>
+<li>
+<p>设置root密码：</p>
+<p>/usr/bin/mysqladmin -u root password '须设置的密码'   </p>
+</li>
+<li>
+<p>设置密码后，重新登陆：<code>mysql -u root -p</code>，提示输入密码，输入上一步设置的密码即可登陆。 <br />
+更改默认字符集为utf-8。打开配置文件，<code>vi /etc/my.cnf</code>，在[mysqld]下增加如下配置:   </p>
+<p>default-character-set=utf8  </p>
+</li>
+</ul>
+<p>在my.cnf中增加[client]片段，并增加配置：</p>
+<div class="highlight"><pre><span class="k">default</span><span class="o">-</span><span class="n">character</span><span class="o">-</span><span class="n">set</span><span class="o">=</span><span class="n">utf8</span>
+</pre></div>
+
+
+<ul>
+<li>
+<p>建立数据库：</p>
+<p>create database DB_NAME default character set utf8 </p>
 </li>
 </ul></div>
 	
