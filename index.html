@@ -73,11 +73,11 @@ by <a class="url fn" href="/author/tao4yu.html">Tao4Yu</a>
 <li>下载jdk，去到Oracle官网下载jdk安装包（jdk-7u25-linux-x64.gz） </li>
 <li>安装jdk，利用命令 <code>tar -zxv -f  jdk-7u25-linux-x64.gz</code>将jdk安装至 /usr/local/lib目录    </li>
 <li>
-<p>设置环境变量，利用vi编辑配置文件<code>/etc/profile(" vi /etc/profile")</code>，增加如下配置： </p>
-<h1>set Java Environment</h1>
-<p>export JAVA_HOME=/usr/local/lib/jdk1.7.0_25 
-export CLASSPATH=".:$JAVA_HOME/lib:$CLASSPATH"<br />
-export PATH="$JAVA_HOME/bin:$PATH"      </p>
+<p>设置环境变量，利用vi编辑配置文件<code>/etc/profile(" vi /etc/profile")</code>，增加如下配置： 
+    :::sh
+    export JAVA_HOME=/usr/local/lib/jdk1.7.0_25 
+    export CLASSPATH=".:$JAVA_HOME/lib:$CLASSPATH"<br />
+    export PATH="$JAVA_HOME/bin:$PATH"      </p>
 </li>
 <li>
 <p>测试jdk的安装配置：" java -version "。   </p>
