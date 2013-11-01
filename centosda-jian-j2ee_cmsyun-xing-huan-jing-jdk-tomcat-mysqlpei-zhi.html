@@ -98,13 +98,19 @@ export PATH="$JAVA_HOME/bin:$PATH"  </p>
 <li>查看mysql启动状态：“ /etc/init.d/mysqld status”    </li>
 <li>启动mysql：“ /etc/init.d/mysqld start” </li>
 <li>mysql安装后，用root用户登陆，默认密码为空，直接登录：“mysql ” </li>
-<li>设置root密码：/usr/bin/mysqladmin -u root password '须设置的密码'  </li>
-<li>设置密码后，重新登陆：" mysql -u root -p"，提示输入密码，输入上一步设置的密码即可登陆。 <br />
+<li>
+<p>设置root密码：/usr/bin/mysqladmin -u root password '须设置的密码'  </p>
+</li>
+<li>
+<p>设置密码后，重新登陆：" mysql -u root -p"，提示输入密码，输入上一步设置的密码即可登陆。 <br />
 更改默认字符集为utf-8。打开配置文件，" vi /etc/my.cnf "，在[mysqld]下增加如下配置: <br />
     default-character-set=utf8<br />
 在my.cnf中增加[client]片段，并增加配置： 
-    default-character-set=utf8  </li>
-<li>建立数据库：" create database DB_NAME default character set utf8 "</li>
+    default-character-set=utf8  </p>
+</li>
+<li>
+<p>建立数据库：" create database DB_NAME default character set utf8 "</p>
+</li>
 </ul></div>
 	
         <hr>
