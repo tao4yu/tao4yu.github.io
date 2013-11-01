@@ -84,8 +84,7 @@ export PATH="$JAVA_HOME/bin:$PATH"</p>
 <li>安装tomcat，利用命令 <code>tar -zxv -f  apache-tomcat-7.0.42.tar.gz</code> 将tomcat7安装至 /usr/local/lib目录</li>
 <li>
 <p>配置tomcat（可选），在此仅配置tomcat管理用户，<code>vi  /usr/local/libapache-tomcat-7.0.42/conf/tomcat-users.xml</code>增加如下配置：</p>
-<p>:::html
-<role rolename="admin-gui"/>
+<p><role rolename="admin-gui"/>
 <role rolename="admin-script"/>
 <role rolename="manager-gui"/>
 <role rolename="manager-script"/>
