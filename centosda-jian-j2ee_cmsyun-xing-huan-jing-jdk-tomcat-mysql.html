@@ -70,9 +70,9 @@ by <a class="url fn" href="/author/tao4yu.html">Tao4Yu</a>
 <li>设置环境变量，利用vi编辑配置文件<code>/etc/profile(" vi /etc/profile")</code>，</li>
 </ul>
 <p>增加如下配置：</p>
-<div class="highlight"><pre><span class="n">export</span> <span class="n">JAVA_HOME</span><span class="o">=/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">jdk1</span><span class="mf">.7.0</span><span class="n">_25</span>
-<span class="n">export</span> <span class="n">CLASSPATH</span><span class="o">=</span><span class="s">&quot;.:$JAVA_HOME/lib:$CLASSPATH&quot;</span>
-<span class="n">export</span> <span class="n">PATH</span><span class="o">=</span><span class="s">&quot;$JAVA_HOME/bin:$PATH&quot;</span>
+<div class="highlight"><pre><span class="nb">export </span><span class="nv">JAVA_HOME</span><span class="o">=</span>/usr/local/lib/jdk1.7.0_25
+<span class="nb">export </span><span class="nv">CLASSPATH</span><span class="o">=</span><span class="s2">&quot;.:$JAVA_HOME/lib:$CLASSPATH&quot;</span>
+<span class="nb">export </span><span class="nv">PATH</span><span class="o">=</span><span class="s2">&quot;$JAVA_HOME/bin:$PATH&quot;</span>
 </pre></div>
 
 
@@ -87,13 +87,13 @@ by <a class="url fn" href="/author/tao4yu.html">Tao4Yu</a>
 <li>配置tomcat（可选），在此仅配置tomcat管理用户，<code>vi  /usr/local/libapache-tomcat-7.0.42/conf/tomcat-users.xml</code></li>
 </ul>
 <p>增加如下配置：</p>
-<div class="highlight"><pre><span class="o">&lt;</span><span class="n">role</span> <span class="n">rolename</span><span class="o">=</span><span class="s">&quot;admin-gui&quot;</span><span class="o">/&gt;</span>
-<span class="o">&lt;</span><span class="n">role</span> <span class="n">rolename</span><span class="o">=</span><span class="s">&quot;admin-script&quot;</span><span class="o">/&gt;</span>
-<span class="o">&lt;</span><span class="n">role</span> <span class="n">rolename</span><span class="o">=</span><span class="s">&quot;manager-gui&quot;</span><span class="o">/&gt;</span>
-<span class="o">&lt;</span><span class="n">role</span> <span class="n">rolename</span><span class="o">=</span><span class="s">&quot;manager-script&quot;</span><span class="o">/&gt;</span>
-<span class="o">&lt;</span><span class="n">role</span> <span class="n">rolename</span><span class="o">=</span><span class="s">&quot;manager-jmx&quot;</span><span class="o">/&gt;</span>
-<span class="o">&lt;</span><span class="n">role</span> <span class="n">rolename</span><span class="o">=</span><span class="s">&quot;manager-status&quot;</span><span class="o">/&gt;</span>
-<span class="o">&lt;</span><span class="n">user</span> <span class="n">username</span><span class="o">=</span><span class="s">&quot;admin&quot;</span> <span class="n">password</span><span class="o">=</span><span class="s">&quot;admin&quot;</span> <span class="n">roles</span><span class="o">=</span><span class="s">&quot;manager-gui,manager-script,manager-jmx,manager-status,admin-script,admin-gui&quot;</span><span class="o">/&gt;</span>
+<div class="highlight"><pre><span class="nt">&lt;role</span> <span class="na">rolename=</span><span class="s">&quot;admin-gui&quot;</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;role</span> <span class="na">rolename=</span><span class="s">&quot;admin-script&quot;</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;role</span> <span class="na">rolename=</span><span class="s">&quot;manager-gui&quot;</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;role</span> <span class="na">rolename=</span><span class="s">&quot;manager-script&quot;</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;role</span> <span class="na">rolename=</span><span class="s">&quot;manager-jmx&quot;</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;role</span> <span class="na">rolename=</span><span class="s">&quot;manager-status&quot;</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;user</span> <span class="na">username=</span><span class="s">&quot;admin&quot;</span> <span class="na">password=</span><span class="s">&quot;admin&quot;</span> <span class="na">roles=</span><span class="s">&quot;manager-gui,manager-script,manager-jmx,manager-status,admin-script,admin-gui&quot;</span><span class="nt">/&gt;</span>
 </pre></div>
 
 
