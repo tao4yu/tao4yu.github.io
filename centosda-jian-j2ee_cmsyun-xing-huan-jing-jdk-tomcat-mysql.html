@@ -67,7 +67,7 @@ by <a class="url fn" href="/author/tao4yu.html">Tao4Yu</a>
 <ul>
 <li>下载jdk，去到Oracle官网下载jdk安装包（jdk-7u25-linux-x64.gz）</li>
 <li>安装jdk，利用命令 <code>tar -zxv -f  jdk-7u25-linux-x64.gz</code>，将jdk安装至 /usr/local/lib目录</li>
-<li>设置环境变量，利用vi编辑配置文件<code>/etc/profile(" vi /etc/profile")</code>，</li>
+<li>设置环境变量，利用vi编辑配置文件<code>/etc/profile(" vi /etc/profile")</code></li>
 </ul>
 <p>增加如下配置：</p>
 <div class="highlight"><pre><span class="nb">export </span><span class="nv">JAVA_HOME</span><span class="o">=</span>/usr/local/lib/jdk1.7.0_25
@@ -77,7 +77,7 @@ by <a class="url fn" href="/author/tao4yu.html">Tao4Yu</a>
 
 
 <ul>
-<li>测试jdk的安装配置：<code>java -version</code>。</li>
+<li>测试jdk的安装配置：<code>java -version</code></li>
 </ul>
 <h3>二、tomcat7的安装配置</h3>
 <hr />
@@ -107,8 +107,8 @@ by <a class="url fn" href="/author/tao4yu.html">Tao4Yu</a>
 <p>设置root密码：<code>/usr/bin/mysqladmin -u root password '须设置的密码'</code></p>
 </li>
 <li>
-<p>设置密码后，重新登陆：<code>mysql -u root -p</code>，提示输入密码，输入上一步设置的密码即可登陆。
-更改默认字符集为utf-8。打开配置文件，<code>vi /etc/my.cnf</code>。</p>
+<p>设置密码后，重新登陆：<code>mysql -u root -p</code>，提示输入密码，输入上一步设置的密码即可登陆
+更改默认字符集为utf-8。打开配置文件，<code>vi /etc/my.cnf</code></p>
 </li>
 </ul>
 <p>在[mysqld]下增加如下配置：</p>
@@ -122,11 +122,11 @@ by <a class="url fn" href="/author/tao4yu.html">Tao4Yu</a>
 
 
 <ul>
-<li>
-<p>建立数据库：</p>
-<p>create database DB_NAME default character set utf8</p>
-</li>
-</ul></div>
+<li>建立数据库：</li>
+</ul>
+<p>建立一个名为DB_NAME的数据库：</p>
+<div class="highlight"><pre><span class="n">create</span> <span class="n">database</span> <span class="n">DB_NAME</span> <span class="k">default</span> <span class="n">character</span> <span class="n">set</span> <span class="n">utf8</span>
+</pre></div></div>
 	
         <hr>
     	   
