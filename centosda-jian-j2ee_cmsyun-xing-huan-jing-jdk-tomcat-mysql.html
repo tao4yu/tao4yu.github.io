@@ -61,26 +61,25 @@ by <a class="url fn" href="/author/tao4yu.html">Tao4Yu</a>
 
         </div>
 	
-        <div><p>因实际项目需要部署至Linux环境运行，现将在centos下的安装配置操作（包括jdk1.7、tomcat7、mysql5的安装配置）记录如下。   </p>
+        <div><p>因实际项目需要部署至Linux环境运行，现将在centos下的安装配置操作（包括jdk1.7、tomcat7、mysql5的安装配置）记录如下。 </p>
 <h3>一、jdk1.7的安装配置</h3>
 <ul>
-<li>下载jdk，去到Oracle官网下载jdk安装包（jdk-7u25-linux-x64.gz） </li>
-<li>安装jdk，利用命令 <code>tar -zxv -f  jdk-7u25-linux-x64.gz</code>将jdk安装至 /usr/local/lib目录    </li>
+<li>下载jdk，去到Oracle官网下载jdk安装包（jdk-7u25-linux-x64.gz）</li>
+<li>安装jdk，利用命令 <code>tar -zxv -f  jdk-7u25-linux-x64.gz</code>将jdk安装至 /usr/local/lib目录</li>
 <li>
-<p>设置环境变量，利用vi编辑配置文件<code>/etc/profile(" vi /etc/profile")</code>，增加如下配置： 
-    :::sh
-    export JAVA_HOME=/usr/local/lib/jdk1.7.0_25 
-    export CLASSPATH=".:$JAVA_HOME/lib:$CLASSPATH"<br />
-    export PATH="$JAVA_HOME/bin:$PATH"      </p>
+<p>设置环境变量，利用vi编辑配置文件<code>/etc/profile(" vi /etc/profile")</code>，增加如下配置：</p>
+<p>export JAVA_HOME=/usr/local/lib/jdk1.7.0_25 
+export CLASSPATH=".:$JAVA_HOME/lib:$CLASSPATH"<br />
+export PATH="$JAVA_HOME/bin:$PATH"      </p>
 </li>
 <li>
-<p>测试jdk的安装配置：" java -version "。   </p>
+<p>测试jdk的安装配置：" java -version "。</p>
 </li>
 </ul>
 <h3>二、tomcat7的安装配置</h3>
 <ul>
-<li>下载tomcat，去到apache官网下载tomcat7的安装包（apache-tomcat-7.0.42.tar.gz）   </li>
-<li>安装tomcat，利用命令 <code>tar -zxv -f  apache-tomcat-7.0.42.tar.gz</code> 将tomcat7安装至 /usr/local/lib目录   </li>
+<li>下载tomcat，去到apache官网下载tomcat7的安装包（apache-tomcat-7.0.42.tar.gz）</li>
+<li>安装tomcat，利用命令 <code>tar -zxv -f  apache-tomcat-7.0.42.tar.gz</code> 将tomcat7安装至 /usr/local/lib目录</li>
 <li>
 <p>配置tomcat（可选），在此仅配置tomcat管理用户，<code>vi  /usr/local/libapache-tomcat-7.0.42/conf/tomcat-users.xml</code>增加如下配置：</p>
 <p>:::html
