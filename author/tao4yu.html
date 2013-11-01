@@ -91,12 +91,12 @@ export PATH="$JAVA_HOME/bin:$PATH"  </p>
 <p>配置tomcat（可选），在此仅配置tomcat管理用户，“ vi  /usr/local/libapache-tomcat-7.0.42/conf/tomcat-users.xml ”增加如下配置：</p>
 <p>:::html
 <role rolename="admin-gui"/>
-    <role rolename="admin-script"/>
-    <role rolename="manager-gui"/>
-    <role rolename="manager-script"/>
-    <role rolename="manager-jmx"/>
-    <role rolename="manager-status"/>
-    <user username="admin" password="admin" roles="manager-gui,manager-script,manager-jmx,manager-status,admin-script,admin-gui"/>  </p>
+<role rolename="admin-script"/>
+<role rolename="manager-gui"/>
+<role rolename="manager-script"/>
+<role rolename="manager-jmx"/>
+<role rolename="manager-status"/>
+<user username="admin" password="admin" roles="manager-gui,manager-script,manager-jmx,manager-status,admin-script,admin-gui"/>  </p>
 </li>
 </ul>
 <h3>三、mysql安装配置（ 默认mysql在安装centos时已选择安装了，现主要关注其配置。）</h3>
