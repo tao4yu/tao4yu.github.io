@@ -58,7 +58,7 @@
     <div class='article'>
         <div class="content-title">
             <a href="/problem solve.html"><h1>JDBC 连连Hive报错：Connection reset</h1></a>
-2013-11-01
+2013-06-20
 
 by <a class="url fn" href="/author/tao4yu.html">Tao4Yu</a>
  
@@ -67,7 +67,20 @@ by <a class="url fn" href="/author/tao4yu.html">Tao4Yu</a>
  
         </div>
         
-        <div></div>
+        <div><p>最近在学习Hive，发现在Eclipse中通过JDBC方式连接Hive报错（报错的信息如下），一直找不到原因，偶然的一次又能连接成功。 
+发现原因可能是打开了Hive Shell，后来把Hive Shell和Hive Web UI关了又试了几次，没有再报错。 
+应该是这个原因：<strong>Hive Shell 、Hive Web UI及JDBC 三种连接Hive Server的方式是互斥的，同一时刻只能用一种方式连接。</strong>  Mark一下。。 </p>
+<div class="highlight"><pre><span class="o">:::</span> <span class="n">Java</span>
+<span class="n">java</span><span class="o">.</span><span class="na">sql</span><span class="o">.</span><span class="na">SQLException</span><span class="o">:</span> <span class="n">org</span><span class="o">.</span><span class="na">apache</span><span class="o">.</span><span class="na">thrift</span><span class="o">.</span><span class="na">transport</span><span class="o">.</span><span class="na">TTransportException</span><span class="o">:</span> <span class="n">java</span><span class="o">.</span><span class="na">net</span><span class="o">.</span><span class="na">SocketException</span><span class="o">:</span> <span class="n">Connection</span> <span class="n">reset</span>
+<span class="n">at</span> <span class="n">org</span><span class="o">.</span><span class="na">apache</span><span class="o">.</span><span class="na">hadoop</span><span class="o">.</span><span class="na">hive</span><span class="o">.</span><span class="na">jdbc</span><span class="o">.</span><span class="na">HiveStatement</span><span class="o">.</span><span class="na">executeQuery</span><span class="o">(</span><span class="n">HiveStatement</span><span class="o">.</span><span class="na">java</span><span class="o">:</span><span class="mi">191</span><span class="o">)</span>
+<span class="n">at</span> <span class="n">org</span><span class="o">.</span><span class="na">apache</span><span class="o">.</span><span class="na">hadoop</span><span class="o">.</span><span class="na">hive</span><span class="o">.</span><span class="na">jdbc</span><span class="o">.</span><span class="na">HiveStatement</span><span class="o">.</span><span class="na">execute</span><span class="o">(</span><span class="n">HiveStatement</span><span class="o">.</span><span class="na">java</span><span class="o">:</span><span class="mi">127</span><span class="o">)</span>
+<span class="n">at</span> <span class="n">org</span><span class="o">.</span><span class="na">apache</span><span class="o">.</span><span class="na">hadoop</span><span class="o">.</span><span class="na">hive</span><span class="o">.</span><span class="na">jdbc</span><span class="o">.</span><span class="na">HiveConnection</span><span class="o">.</span><span class="na">configureConnection</span><span class="o">(</span><span class="n">HiveConnection</span><span class="o">.</span><span class="na">java</span><span class="o">:</span><span class="mi">126</span><span class="o">)</span>
+<span class="n">at</span> <span class="n">org</span><span class="o">.</span><span class="na">apache</span><span class="o">.</span><span class="na">hadoop</span><span class="o">.</span><span class="na">hive</span><span class="o">.</span><span class="na">jdbc</span><span class="o">.</span><span class="na">HiveConnection</span><span class="o">.&lt;</span><span class="n">init</span><span class="o">&gt;(</span><span class="n">HiveConnection</span><span class="o">.</span><span class="na">java</span><span class="o">:</span><span class="mi">121</span><span class="o">)</span>
+<span class="n">at</span> <span class="n">org</span><span class="o">.</span><span class="na">apache</span><span class="o">.</span><span class="na">hadoop</span><span class="o">.</span><span class="na">hive</span><span class="o">.</span><span class="na">jdbc</span><span class="o">.</span><span class="na">HiveDriver</span><span class="o">.</span><span class="na">connect</span><span class="o">(</span><span class="n">HiveDriver</span><span class="o">.</span><span class="na">java</span><span class="o">:</span><span class="mi">104</span><span class="o">)</span>
+<span class="n">at</span> <span class="n">java</span><span class="o">.</span><span class="na">sql</span><span class="o">.</span><span class="na">DriverManager</span><span class="o">.</span><span class="na">getConnection</span><span class="o">(</span><span class="n">DriverManager</span><span class="o">.</span><span class="na">java</span><span class="o">:</span><span class="mi">582</span><span class="o">)</span>
+<span class="n">at</span> <span class="n">java</span><span class="o">.</span><span class="na">sql</span><span class="o">.</span><span class="na">DriverManager</span><span class="o">.</span><span class="na">getConnection</span><span class="o">(</span><span class="n">DriverManager</span><span class="o">.</span><span class="na">java</span><span class="o">:</span><span class="mi">185</span><span class="o">)</span>
+<span class="n">at</span> <span class="n">com</span><span class="o">.</span><span class="na">buptsse</span><span class="o">.</span><span class="na">brandtracker</span><span class="o">.</span><span class="na">data</span><span class="o">.</span><span class="na">HcCsvGenerator</span><span class="o">.</span><span class="na">main</span><span class="o">(</span><span class="n">HcCsvGenerator</span><span class="o">.</span><span class="na">java</span><span class="o">:</span><span class="mi">175</span><span class="o">)</span>
+</pre></div></div>
         <hr />
     </div>
 		
