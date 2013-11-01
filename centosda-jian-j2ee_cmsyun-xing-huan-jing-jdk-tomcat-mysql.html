@@ -72,10 +72,8 @@ by <a class="url fn" href="/author/tao4yu.html">Tao4Yu</a>
 export CLASSPATH=".:$JAVA_HOME/lib:$CLASSPATH"
 export PATH="$JAVA_HOME/bin:$PATH"</p>
 </li>
-<li>
-<p>测试jdk的安装配置：" java -version "。</p>
-</li>
 </ul>
+<p>+测试jdk的安装配置：" java -version "。</p>
 <h3>二、tomcat7的安装配置</h3>
 <ul>
 <li>下载tomcat，去到apache官网下载tomcat7的安装包（apache-tomcat-7.0.42.tar.gz）</li>
@@ -94,28 +92,22 @@ export PATH="$JAVA_HOME/bin:$PATH"</p>
 </ul>
 <h3>三、mysql安装配置（ 默认mysql在安装centos时已选择安装了，现主要关注其配置。）</h3>
 <ul>
+<li>查看mysql启动状态：<code>/etc/init.d/mysqld status</code></li>
+<li>启动mysql：<code>/etc/init.d/mysqld start</code></li>
+<li>mysql安装后，用root用户登陆，默认密码为空，直接登录：<code>mysql</code></li>
 <li>
-<p>查看mysql启动状态：</p>
-<p>/etc/init.d/mysqld status</p>
-</li>
-<li>
-<p>启动mysql：</p>
-<p>/etc/init.d/mysqld start</p>
-</li>
-<li>
-<p>mysql安装后，用root用户登陆，默认密码为空，直接登录：</p>
-<p>mysql</p>
-</li>
-<li>
-<p>设置root密码：</p>
-<p>/usr/bin/mysqladmin -u root password '须设置的密码'</p>
+<p>设置root密码：<code>/usr/bin/mysqladmin -u root password '须设置的密码'</code></p>
 </li>
 <li>
 <p>设置密码后，重新登陆：<code>mysql -u root -p</code>，提示输入密码，输入上一步设置的密码即可登陆。
-更改默认字符集为utf-8。打开配置文件，<code>vi /etc/my.cnf</code>，在[mysqld]下增加如下配置：</p>
-<p>default-character-set=utf8</p>
+更改默认字符集为utf-8。打开配置文件，<code>vi /etc/my.cnf</code></p>
 </li>
 </ul>
+<p>在[mysqld]下增加如下配置：</p>
+<div class="highlight"><pre><span class="k">default</span><span class="o">-</span><span class="n">character</span><span class="o">-</span><span class="n">set</span><span class="o">=</span><span class="n">utf8</span>
+</pre></div>
+
+
 <p>在my.cnf中增加[client]片段，并增加配置：</p>
 <div class="highlight"><pre><span class="k">default</span><span class="o">-</span><span class="n">character</span><span class="o">-</span><span class="n">set</span><span class="o">=</span><span class="n">utf8</span>
 </pre></div>
