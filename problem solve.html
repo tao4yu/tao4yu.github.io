@@ -61,11 +61,8 @@ by <a class="url fn" href="/author/tao4yu.html">Tao4Yu</a>
 
         </div>
 	
-        <div><div class="highlight"><pre>     <span class="err">最近在学习</span><span class="n">Hive</span><span class="err">，发现在</span><span class="n">Eclipse</span><span class="err">中通过</span><span class="n">JDBC</span><span class="err">方式连接</span><span class="n">Hive</span><span class="err">报错（报错的信息如下），一直找不到原因，偶然的一次又能连接成功。</span>
-</pre></div>
-
-
-<p>发现原因可能是打开了Hive Shell，后来把Hive Shell和Hive Web UI关了又试了几次，没有再报错。 
+        <div><p>最近在学习Hive，发现在Eclipse中通过JDBC方式连接Hive报错（报错的信息如下），一直找不到原因，偶然的一次又能连接成功。 
+发现原因可能是打开了Hive Shell，后来把Hive Shell和Hive Web UI关了又试了几次，没有再报错。 
 应该是这个原因：<strong>Hive Shell 、Hive Web UI及JDBC 三种连接Hive Server的方式是互斥的，同一时刻只能用一种方式连接。</strong>  Mark一下。。 </p>
 <div class="highlight"><pre> <span class="n">java</span><span class="o">.</span><span class="na">sql</span><span class="o">.</span><span class="na">SQLException</span><span class="o">:</span> <span class="n">org</span><span class="o">.</span><span class="na">apache</span><span class="o">.</span><span class="na">thrift</span><span class="o">.</span><span class="na">transport</span><span class="o">.</span><span class="na">TTransportException</span><span class="o">:</span> <span class="n">java</span><span class="o">.</span><span class="na">net</span><span class="o">.</span><span class="na">SocketException</span><span class="o">:</span> <span class="n">Connection</span> <span class="n">reset</span>
 <span class="n">at</span> <span class="n">org</span><span class="o">.</span><span class="na">apache</span><span class="o">.</span><span class="na">hadoop</span><span class="o">.</span><span class="na">hive</span><span class="o">.</span><span class="na">jdbc</span><span class="o">.</span><span class="na">HiveStatement</span><span class="o">.</span><span class="na">executeQuery</span><span class="o">(</span><span class="n">HiveStatement</span><span class="o">.</span><span class="na">java</span><span class="o">:</span><span class="mi">191</span><span class="o">)</span>
