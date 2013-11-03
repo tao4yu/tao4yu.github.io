@@ -5,48 +5,48 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://tao4yu.github.io/index.html</loc>
-<lastmod>2013-11-02T18:22:53-00:00</lastmod>
+<lastmod>2013-11-03T19:34:02-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://tao4yu.github.io/archives.html</loc>
-<lastmod>2013-11-02T18:22:53-00:00</lastmod>
+<lastmod>2013-11-03T19:34:02-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://tao4yu.github.io/tags.html</loc>
-<lastmod>2013-11-02T18:22:53-00:00</lastmod>
+<lastmod>2013-11-03T19:34:02-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://tao4yu.github.io/categories.html</loc>
-<lastmod>2013-11-02T18:22:53-00:00</lastmod>
+<lastmod>2013-11-03T19:34:02-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://tao4yu.github.io/pages/about.html</loc>
-<lastmod>2013-11-02T18:22:53-00:00</lastmod>
+<lastmod>2013-11-03T19:34:02-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.3</priority>
 </url>
 
 <url>
-<loc>http://tao4yu.github.io/centosda-jian-j2ee_cmsyun-xing-huan-jing-jdk-tomcat-mysql.html</loc>
+<loc>http://tao4yu.github.io/pages/2013/07/26/centosda-jian-j2ee_cmsyun-xing-huan-jing-jdk-tomcat-mysql.html</loc>
 <lastmod>2013-07-26T00:00:00-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://tao4yu.github.io/problem_solve.html</loc>
+<loc>http://tao4yu.github.io/pages/2013/06/20/problem_solve.html</loc>
 <lastmod>2013-06-20T00:00:00-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
