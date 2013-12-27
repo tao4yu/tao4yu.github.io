@@ -64,7 +64,7 @@ activate.bat
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;执行该段 &lt;code&gt;python&lt;/code&gt;代码，即可在数据库中建立中文的表名及字段名。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Tao4Yu</dc:creator><pubDate>Fri, 27 Dec 2013 00:00:00 +0800</pubDate><guid>tag:tao4yu.github.io,2013-12-27:pages/2013/12/27/problem_solve.html</guid><category>MySQLdb</category><category>Python</category><category>MySQL</category></item><item><title>centos搭建J2EE_CMS运行环境（jdk +tomcat +mysql）</title><link>http://tao4yu.github.io/pages/2013/07/26/centosda-jian-j2ee_cmsyun-xing-huan-jing-jdk-tomcat-mysql.html</link><description>&lt;p&gt;因实际项目需要部署至Linux环境运行，现将在centos下的安装配置操作（包括jdk1.7、tomcat7、mysql5的安装配置）记录如下。&lt;/p&gt;
+&lt;p&gt;执行该段 &lt;code&gt;python&lt;/code&gt;代码，即可在数据库中建立名字为 &lt;code&gt;中文表名&lt;/code&gt;的数据库表，该表有一个字段名为&lt;code&gt;名称&lt;/code&gt;。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Tao4Yu</dc:creator><pubDate>Fri, 27 Dec 2013 00:00:00 +0800</pubDate><guid>tag:tao4yu.github.io,2013-12-27:pages/2013/12/27/problem_solve.html</guid><category>MySQLdb</category><category>Python</category><category>MySQL</category></item><item><title>centos搭建J2EE_CMS运行环境（jdk +tomcat +mysql）</title><link>http://tao4yu.github.io/pages/2013/07/26/centosda-jian-j2ee_cmsyun-xing-huan-jing-jdk-tomcat-mysql.html</link><description>&lt;p&gt;因实际项目需要部署至Linux环境运行，现将在centos下的安装配置操作（包括jdk1.7、tomcat7、mysql5的安装配置）记录如下。&lt;/p&gt;
 &lt;h3&gt;一、jdk1.7的安装配置&lt;/h3&gt;
 &lt;hr /&gt;
 &lt;ul&gt;
