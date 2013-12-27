@@ -20,7 +20,7 @@ activate.bat
 
 
 &lt;h3&gt;二、下载并安装Python MySQLdb库&lt;/h3&gt;
-&lt;p&gt;×××&lt;/p&gt;
+&lt;hr /&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;下载对应64位的&lt;a href="http://www.codegood.com/downloads"&gt;mysqldb&lt;/a&gt;库。 我下的是：&lt;code&gt;MySQL-python-1.2.3.win-amd64-py2.7.exe&lt;/code&gt;。
@@ -36,8 +36,8 @@ import MySQLdb&lt;/p&gt;
 &lt;/ul&gt;
 &lt;p&gt;如果没报错，说明安装成功&lt;/p&gt;
 &lt;h3&gt;三、建立数据库表（已经建立名为testdb的数据库，数据库编码为utf-8）&lt;/h3&gt;
-&lt;p&gt;×××
-建立表名及字段名为中文的数据库表。&lt;/p&gt;
+&lt;hr /&gt;
+&lt;p&gt;建立表名及字段名为中文的数据库表。&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="c"&gt;# ! /usr/bin/env python&lt;/span&gt;
 &lt;span class="c"&gt;# -*- coding: utf-8 -*-&lt;/span&gt;
 
