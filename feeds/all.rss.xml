@@ -2,10 +2,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Tao4Yu</title><link>http://tao4yu.github.io/</link><description></description><atom:link href="http://tao4yu.github.io/feeds/all.rss.xml" rel="self"></atom:link><lastBuildDate>Fri, 27 Dec 2013 00:00:00 +0800</lastBuildDate><item><title>Python MySQLdb Startup</title><link>http://tao4yu.github.io/pages/2013/12/27/problem_solve.html</link><description>&lt;p&gt;因项目实际需要，须利用Python在MySQl数据库中建立中文的表名及中文字段名（很诡异的需求），出现的各种问题让人头疼，现将过程记录一下。 
 开发环境如下：&lt;/p&gt;
 &lt;hr /&gt;
-&lt;p&gt;+Win8 x64
-+python 2.7
-+virtualenv 1.10
-+mysql5.5&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Win8 x64&lt;/li&gt;
+&lt;li&gt;python 2.7&lt;/li&gt;
+&lt;li&gt;virtualenv 1.10&lt;/li&gt;
+&lt;li&gt;mysql5.5&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h3&gt;一、建立项目目录&lt;/h3&gt;
 &lt;p&gt;×××
 通过如下命令建立项目目录env1，并激活该目录：&lt;/p&gt;
@@ -19,17 +21,19 @@ activate.bat
 
 &lt;h3&gt;二、下载并安装Python MySQLdb库&lt;/h3&gt;
 &lt;p&gt;×××&lt;/p&gt;
-&lt;p&gt;+下载对应64位的&lt;a href="http://www.codegood.com/downloads"&gt;mysqldb&lt;/a&gt;库。 我下的是：&lt;code&gt;MySQL-python-1.2.3.win-amd64-py2.7.exe&lt;/code&gt;。
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;下载对应64位的&lt;a href="http://www.codegood.com/downloads"&gt;mysqldb&lt;/a&gt;库。 我下的是：&lt;code&gt;MySQL-python-1.2.3.win-amd64-py2.7.exe&lt;/code&gt;。
 将下载的安装文件放至env1目录下，在env1目录下(已激活)，通过如下命令安装安装。&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;easy_install  MySQL-python-1.2.3.win-amd64-py2.7.exe
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;+测试是否安装成功，运行命令&lt;code&gt;python&lt;/code&gt;进入隔离环境env1    。&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;MySQLdb&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
+&lt;p&gt;:::sh
+easy_install  MySQL-python-1.2.3.win-amd64-py2.7.exe&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;测试是否安装成功，运行命令&lt;code&gt;python&lt;/code&gt;进入隔离环境env1   。&lt;/p&gt;
+&lt;p&gt;:::python
+import MySQLdb&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
 &lt;p&gt;如果没报错，说明安装成功&lt;/p&gt;
 &lt;h3&gt;三、建立数据库表（已经建立名为testdb的数据库，数据库编码为utf-8）&lt;/h3&gt;
 &lt;p&gt;×××

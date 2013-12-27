@@ -67,10 +67,12 @@ by <a class="url fn" href="http://tao4yu.github.io/author/tao4yu.html">Tao4Yu</a
         <div><p>因项目实际需要，须利用Python在MySQl数据库中建立中文的表名及中文字段名（很诡异的需求），出现的各种问题让人头疼，现将过程记录一下。 
 开发环境如下：</p>
 <hr />
-<p>+Win8 x64
-+python 2.7
-+virtualenv 1.10
-+mysql5.5</p>
+<ul>
+<li>Win8 x64</li>
+<li>python 2.7</li>
+<li>virtualenv 1.10</li>
+<li>mysql5.5</li>
+</ul>
 <h3>一、建立项目目录</h3>
 <p>×××
 通过如下命令建立项目目录env1，并激活该目录：</p>
@@ -84,17 +86,19 @@ activate.bat
 
 <h3>二、下载并安装Python MySQLdb库</h3>
 <p>×××</p>
-<p>+下载对应64位的<a href="http://www.codegood.com/downloads">mysqldb</a>库。 我下的是：<code>MySQL-python-1.2.3.win-amd64-py2.7.exe</code>。
+<ul>
+<li>
+<p>下载对应64位的<a href="http://www.codegood.com/downloads">mysqldb</a>库。 我下的是：<code>MySQL-python-1.2.3.win-amd64-py2.7.exe</code>。
 将下载的安装文件放至env1目录下，在env1目录下(已激活)，通过如下命令安装安装。</p>
-<div class="highlight"><pre>easy_install  MySQL-python-1.2.3.win-amd64-py2.7.exe
-</pre></div>
-
-
-<p>+测试是否安装成功，运行命令<code>python</code>进入隔离环境env1    。</p>
-<div class="highlight"><pre><span class="kn">import</span> <span class="nn">MySQLdb</span>
-</pre></div>
-
-
+<p>:::sh
+easy_install  MySQL-python-1.2.3.win-amd64-py2.7.exe</p>
+</li>
+<li>
+<p>测试是否安装成功，运行命令<code>python</code>进入隔离环境env1   。</p>
+<p>:::python
+import MySQLdb</p>
+</li>
+</ul>
 <p>如果没报错，说明安装成功</p>
 <h3>三、建立数据库表（已经建立名为testdb的数据库，数据库编码为utf-8）</h3>
 <p>×××
