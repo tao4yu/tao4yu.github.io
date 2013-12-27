@@ -5,37 +5,44 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://tao4yu.github.io/index.html</loc>
-<lastmod>2013-11-03T22:17:14-00:00</lastmod>
+<lastmod>2013-12-27T12:41:55-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://tao4yu.github.io/archives.html</loc>
-<lastmod>2013-11-03T22:17:14-00:00</lastmod>
+<lastmod>2013-12-27T12:41:55-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://tao4yu.github.io/tags.html</loc>
-<lastmod>2013-11-03T22:17:14-00:00</lastmod>
+<lastmod>2013-12-27T12:41:55-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://tao4yu.github.io/categories.html</loc>
-<lastmod>2013-11-03T22:17:14-00:00</lastmod>
+<lastmod>2013-12-27T12:41:55-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://tao4yu.github.io/pages/about.html</loc>
-<lastmod>2013-11-03T22:17:14-00:00</lastmod>
+<lastmod>2013-12-27T12:41:55-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.3</priority>
+</url>
+
+<url>
+<loc>http://tao4yu.github.io/pages/2013/12/27/problem_solve.html</loc>
+<lastmod>2013-12-27T00:00:00-00:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
 </url>
 
 <url>
@@ -54,7 +61,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://tao4yu.github.io/category/tech.html</loc>
-<lastmod>2013-07-26T00:00:00-00:00</lastmod>
+<lastmod>2013-12-27T00:00:00-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -81,13 +88,6 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>http://tao4yu.github.io/tag/hive.html</loc>
-<lastmod>2013-06-20T00:00:00-00:00</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
 <loc>http://tao4yu.github.io/tag/centos.html</loc>
 <lastmod>2013-07-26T00:00:00-00:00</lastmod>
 <changefreq>daily</changefreq>
@@ -95,10 +95,52 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>http://tao4yu.github.io/author/tao4yu.html</loc>
-<lastmod>2013-07-26T00:00:00-00:00</lastmod>
+<loc>http://tao4yu.github.io/tag/python.html</loc>
+<lastmod>2013-12-27T00:00:00-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
+</url>
+
+<url>
+<loc>http://tao4yu.github.io/tag/hive.html</loc>
+<lastmod>2013-06-20T00:00:00-00:00</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>http://tao4yu.github.io/tag/mysqldb.html</loc>
+<lastmod>2013-12-27T00:00:00-00:00</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>http://tao4yu.github.io/tag/mysql.html</loc>
+<lastmod>2013-12-27T00:00:00-00:00</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>http://tao4yu.github.io/author/tao4yu.html</loc>
+<lastmod>2013-12-27T00:00:00-00:00</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>http://tao4yu.github.io/pages/2013/06/20/problem_solve.html</loc>
+<lastmod>2013-06-20T00:00:00-00:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
+</url>
+
+<url>
+<loc>http://tao4yu.github.io/pages/2013/12/27/problem_solve.html</loc>
+<lastmod>2013-12-27T00:00:00-00:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
 </url>
 
 </urlset>

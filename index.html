@@ -60,8 +60,8 @@
 
     <div class='article'>
         <div class="content-title">
-            <a href="http://tao4yu.github.io/pages/2013/07/26/centosda-jian-j2ee_cmsyun-xing-huan-jing-jdk-tomcat-mysql.html"><h1>centos搭建J2EE_CMS运行环境（jdk +tomcat +mysql）</h1></a>
-2013-07-26
+            <a href="http://tao4yu.github.io/pages/2013/12/27/problem_solve.html"><h1>Python MySQLdb Startup</h1></a>
+2013-12-27
 
 by <a class="url fn" href="http://tao4yu.github.io/author/tao4yu.html">Tao4Yu</a>
  
@@ -70,7 +70,82 @@ by <a class="url fn" href="http://tao4yu.github.io/author/tao4yu.html">Tao4Yu</a
  
         </div>
         
-        <div><p>因实际项目需要部署至Linux环境运行，现将在centos下的安装配置操作（包括jdk1.7、tomcat7、mysql5的安装配置）记录如下。</p>
+        <div><p>因项目实际需要，须利用Python在MySQl数据库中建立中文的表名及中文字段名（很诡异的需求），出现的各种问题让人头疼，现将过程记录一下。 
+开发环境如下：</p>
+<hr />
+<p>+Win8 x64
++python 2.7
++virtualenv 1.10
++mysql5.5</p>
+<h3>一、建立项目目录</h3>
+<p>×××
+通过如下命令建立项目目录env1，并激活该目录：</p>
+<div class="highlight"><pre><span class="nb">cd </span>virtualEnv
+virtualenv   env1
+<span class="nb">cd </span>env1
+<span class="nb">cd </span>scripts
+activate.bat
+</pre></div>
+
+
+<h3>二、下载并安装Python MySQLdb库</h3>
+<p>×××</p>
+<p>+下载对应64位的<a href="http://www.codegood.com/downloads">mysqldb</a>库。 我下的是：<code>MySQL-python-1.2.3.win-amd64-py2.7.exe</code>。
+将下载的安装文件放至env1目录下，在env1目录下(已激活)，通过如下命令安装安装。</p>
+<div class="highlight"><pre>easy_install  MySQL-python-1.2.3.win-amd64-py2.7.exe
+</pre></div>
+
+
+<p>+测试是否安装成功，运行命令<code>python</code>进入隔离环境env1    。</p>
+<div class="highlight"><pre><span class="kn">import</span> <span class="nn">MySQLdb</span>
+</pre></div>
+
+
+<p>如果没报错，说明安装成功</p>
+<h3>三、建立数据库表（已经建立名为testdb的数据库，数据库编码为utf-8）</h3>
+<p>×××
+建立表名及字段名为中文的数据库表。</p>
+<div class="highlight"><pre><span class="c"># ! /usr/bin/env python</span>
+<span class="c"># -*- coding: utf-8 -*-</span>
+
+<span class="c"># 在MySQL中建立中文表名及中文字段名</span>
+<span class="c"># MySQLdb 默认编码为 latin-1，改为utf-8</span>
+<span class="kn">import</span> <span class="nn">MySQLdb</span> <span class="kn">as</span> <span class="nn">mdb</span>
+
+<span class="n">con</span> <span class="o">=</span> <span class="n">mdb</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s">&#39;localhost&#39;</span><span class="p">,</span> <span class="s">&#39;root&#39;</span><span class="p">,</span> <span class="s">&#39;root&#39;</span><span class="p">,</span> <span class="s">&#39;testdb&#39;</span><span class="p">)</span>
+<span class="n">con</span><span class="o">.</span><span class="n">set_character_set</span><span class="p">(</span><span class="s">&#39;utf8&#39;</span><span class="p">)</span>
+
+<span class="k">with</span> <span class="n">con</span><span class="p">:</span>
+    <span class="n">cur</span> <span class="o">=</span> <span class="n">con</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
+    <span class="c"># 设置utf8参数</span>
+    <span class="n">cur</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s">&#39;set names utf8&#39;</span><span class="p">)</span>
+    <span class="n">cur</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s">&#39;set character set utf8&#39;</span><span class="p">)</span>
+    <span class="n">cur</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s">&#39;set character_set_connection=utf8&#39;</span><span class="p">)</span>
+
+    <span class="n">cur</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s">&quot;create table 中文表名(Id int primary key auto_increment, 名称 text)&quot;</span><span class="p">)</span>
+</pre></div>
+
+
+<p>执行该段 <code>python</code>代码，即可在数据库中建立中文的表名及字段名。</p></div>
+        <hr />
+    </div>
+		
+
+ 
+        
+
+ 
+
+    <div class='article'>
+        <a href="http://tao4yu.github.io/pages/2013/07/26/centosda-jian-j2ee_cmsyun-xing-huan-jing-jdk-tomcat-mysql.html"><h2>centos搭建J2EE_CMS运行环境（jdk +tomcat +mysql）</h2></a>
+        <div class= "well small"> 2013-07-26
+
+by <a class="url fn" href="http://tao4yu.github.io/author/tao4yu.html">Tao4Yu</a>
+ 
+
+
+ </div>
+        <div class="summary"><p>因实际项目需要部署至Linux环境运行，现将在centos下的安装配置操作（包括jdk1.7、tomcat7、mysql5的安装配置）记录如下。</p>
 <h3>一、jdk1.7的安装配置</h3>
 <hr />
 <ul>
@@ -81,64 +156,9 @@ by <a class="url fn" href="http://tao4yu.github.io/author/tao4yu.html">Tao4Yu</a
 <p>增加如下配置：</p>
 <div class="highlight"><pre><span class="nb">export </span><span class="nv">JAVA_HOME</span><span class="o">=</span>/usr/local/lib/jdk1.7.0_25
 <span class="nb">export </span><span class="nv">CLASSPATH</span><span class="o">=</span><span class="s2">&quot;.:$JAVA_HOME/lib:$CLASSPATH&quot;</span>
-<span class="nb">export </span><span class="nv">PATH</span><span class="o">=</span><span class="s2">&quot;$JAVA_HOME/bin:$PATH&quot;</span>
-</pre></div>
-
-
-<ul>
-<li>测试jdk的安装配置：<code>java -version</code></li>
-</ul>
-<h3>二、tomcat7的安装配置</h3>
-<hr />
-<ul>
-<li>下载tomcat，去到apache官网下载tomcat7的安装包（apache-tomcat-7.0.42.tar.gz）</li>
-<li>安装tomcat，利用命令 <code>tar -zxv -f  apache-tomcat-7.0.42.tar.gz</code>，将tomcat7安装至 /usr/local/lib目录</li>
-<li>配置tomcat（可选），在此仅配置tomcat管理用户，<code>vi  /usr/local/libapache-tomcat-7.0.42/conf/tomcat-users.xml</code></li>
-</ul>
-<p>增加如下配置：</p>
-<div class="highlight"><pre><span class="nt">&lt;role</span> <span class="na">rolename=</span><span class="s">&quot;admin-gui&quot;</span><span class="nt">/&gt;</span>
-<span class="nt">&lt;role</span> <span class="na">rolename=</span><span class="s">&quot;admin-script&quot;</span><span class="nt">/&gt;</span>
-<span class="nt">&lt;role</span> <span class="na">rolename=</span><span class="s">&quot;manager-gui&quot;</span><span class="nt">/&gt;</span>
-<span class="nt">&lt;role</span> <span class="na">rolename=</span><span class="s">&quot;manager-script&quot;</span><span class="nt">/&gt;</span>
-<span class="nt">&lt;role</span> <span class="na">rolename=</span><span class="s">&quot;manager-jmx&quot;</span><span class="nt">/&gt;</span>
-<span class="nt">&lt;role</span> <span class="na">rolename=</span><span class="s">&quot;manager-status&quot;</span><span class="nt">/&gt;</span>
-<span class="nt">&lt;user</span> <span class="na">username=</span><span class="s">&quot;admin&quot;</span> <span class="na">password=</span><span class="s">&quot;admin&quot;</span> <span class="na">roles=</span><span class="s">&quot;manager-gui,manager-script,manager-jmx,manager-status,admin-script,admin-gui&quot;</span><span class="nt">/&gt;</span>
-</pre></div>
-
-
-<h3>三、mysql安装配置（ 默认mysql在安装centos时已选择安装了，现主要关注其配置。）</h3>
-<hr />
-<ul>
-<li>查看mysql启动状态：<code>/etc/init.d/mysqld status</code></li>
-<li>启动mysql：<code>/etc/init.d/mysqld start</code></li>
-<li>mysql安装后，用root用户登陆，默认密码为空，直接登录：<code>mysql</code></li>
-<li>
-<p>设置root密码：<code>/usr/bin/mysqladmin -u root password '须设置的密码'</code></p>
-</li>
-<li>
-<p>设置密码后，重新登陆：<code>mysql -u root -p</code>，提示输入密码，输入上一步设置的密码即可登陆
-更改默认字符集为utf-8。打开配置文件，<code>vi /etc/my.cnf</code></p>
-</li>
-</ul>
-<p>在[mysqld]下增加如下配置：</p>
-<div class="highlight"><pre><span class="k">default</span><span class="o">-</span><span class="n">character</span><span class="o">-</span><span class="n">set</span><span class="o">=</span><span class="n">utf8</span>
-</pre></div>
-
-
-<p>在my.cnf中增加[client]片段，并增加配置：</p>
-<div class="highlight"><pre><span class="k">default</span><span class="o">-</span><span class="n">character</span><span class="o">-</span><span class="n">set</span><span class="o">=</span><span class="n">utf8</span>
-</pre></div>
-
-
-<ul>
-<li>建立数据库：</li>
-</ul>
-<p>建立一个名为DB_NAME的数据库：</p>
-<div class="highlight"><pre><span class="n">create</span> <span class="n">database</span> <span class="n">DB_NAME</span> <span class="k">default</span> <span class="n">character</span> <span class="n">set</span> <span class="n">utf8</span>
-</pre></div></div>
-        <hr />
-    </div>
-		
+<span class="nb">export </span><span class="nv">PATH</span><span class="o">=</span><span class="s2">&quot;$JAVA_HOME/bin ...</span></pre></div> <a class="btn btn-info xsmall" href="http://tao4yu.github.io/pages/2013/07/26/centosda-jian-j2ee_cmsyun-xing-huan-jing-jdk-tomcat-mysql.html">read more</a></div>
+    </div>	
+				
 
  
         
