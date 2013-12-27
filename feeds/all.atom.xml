@@ -24,16 +24,16 @@ activate.bat
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;下载对应64位的&lt;a href="http://www.codegood.com/downloads"&gt;mysqldb&lt;/a&gt;库。 我下的是：&lt;code&gt;MySQL-python-1.2.3.win-amd64-py2.7.exe&lt;/code&gt;。
-将下载的安装文件放至env1目录下，在env1目录下(已激活)，通过如下命令安装安装。&lt;/p&gt;
+将下载的安装文件放至env1目录下，在env1目录下(已激活)，通过如下命令安装安装。
+执行如下命令:&lt;/p&gt;
 &lt;p&gt;:::sh
 easy_install  MySQL-python-1.2.3.win-amd64-py2.7.exe&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;测试是否安装成功，运行命令&lt;code&gt;python&lt;/code&gt;进入隔离环境env1。&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;MySQLdb&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
+&lt;p&gt;测试是否安装成功，运行命令&lt;code&gt;python&lt;/code&gt;进入隔离环境env1。
+执行如下命令:&lt;/p&gt;
+&lt;p&gt;:::python
+import MySQLdb&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;如果没报错，说明安装成功。&lt;/p&gt;
@@ -86,16 +86,16 @@ activate.bat
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;下载对应64位的&lt;a href="http://www.codegood.com/downloads"&gt;mysqldb&lt;/a&gt;库。 我下的是：&lt;code&gt;MySQL-python-1.2.3.win-amd64-py2.7.exe&lt;/code&gt;。
-将下载的安装文件放至env1目录下，在env1目录下(已激活)，通过如下命令安装安装。&lt;/p&gt;
+将下载的安装文件放至env1目录下，在env1目录下(已激活)，通过如下命令安装安装。
+执行如下命令:&lt;/p&gt;
 &lt;p&gt;:::sh
 easy_install  MySQL-python-1.2.3.win-amd64-py2.7.exe&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;测试是否安装成功，运行命令&lt;code&gt;python&lt;/code&gt;进入隔离环境env1。&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;MySQLdb&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
+&lt;p&gt;测试是否安装成功，运行命令&lt;code&gt;python&lt;/code&gt;进入隔离环境env1。
+执行如下命令:&lt;/p&gt;
+&lt;p&gt;:::python
+import MySQLdb&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;如果没报错，说明安装成功。&lt;/p&gt;
