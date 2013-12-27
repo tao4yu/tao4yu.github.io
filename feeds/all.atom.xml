@@ -25,7 +25,7 @@ activate.bat
 &lt;li&gt;
 &lt;p&gt;下载对应64位的&lt;a href="http://www.codegood.com/downloads"&gt;mysqldb&lt;/a&gt;库。 我下的是：&lt;code&gt;MySQL-python-1.2.3.win-amd64-py2.7.exe&lt;/code&gt;。
 将下载的安装文件放至env1目录下，在env1目录下(已激活)，通过如下命令安装安装。&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;easy_install  MySQL-python-1.2.3.win-amd64-py2.7.exe
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;easy_install&lt;/span&gt;  &lt;span class="n"&gt;MySQL&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;python&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mf"&gt;1.2&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="mf"&gt;3.&lt;/span&gt;&lt;span class="n"&gt;win&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;amd64&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;py2&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="mf"&gt;7.&lt;/span&gt;&lt;span class="n"&gt;exe&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -89,7 +89,7 @@ activate.bat
 &lt;li&gt;
 &lt;p&gt;下载对应64位的&lt;a href="http://www.codegood.com/downloads"&gt;mysqldb&lt;/a&gt;库。 我下的是：&lt;code&gt;MySQL-python-1.2.3.win-amd64-py2.7.exe&lt;/code&gt;。
 将下载的安装文件放至env1目录下，在env1目录下(已激活)，通过如下命令安装安装。&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;easy_install  MySQL-python-1.2.3.win-amd64-py2.7.exe
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;easy_install&lt;/span&gt;  &lt;span class="n"&gt;MySQL&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;python&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mf"&gt;1.2&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="mf"&gt;3.&lt;/span&gt;&lt;span class="n"&gt;win&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;amd64&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;py2&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="mf"&gt;7.&lt;/span&gt;&lt;span class="n"&gt;exe&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
