@@ -29,7 +29,7 @@ activate.bat
 easy_install  MySQL-python-1.2.3.win-amd64-py2.7.exe&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;测试是否安装成功，运行命令&lt;code&gt;python&lt;/code&gt;进入隔离环境env1   。&lt;/p&gt;
+&lt;p&gt;测试是否安装成功，运行命令&lt;code&gt;python&lt;/code&gt;进入隔离环境env1。&lt;/p&gt;
 &lt;p&gt;:::python
 import MySQLdb&lt;/p&gt;
 &lt;/li&gt;
@@ -89,7 +89,7 @@ activate.bat
 easy_install  MySQL-python-1.2.3.win-amd64-py2.7.exe&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;测试是否安装成功，运行命令&lt;code&gt;python&lt;/code&gt;进入隔离环境env1   。&lt;/p&gt;
+&lt;p&gt;测试是否安装成功，运行命令&lt;code&gt;python&lt;/code&gt;进入隔离环境env1。&lt;/p&gt;
 &lt;p&gt;:::python
 import MySQLdb&lt;/p&gt;
 &lt;/li&gt;
