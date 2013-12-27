@@ -95,7 +95,7 @@ activate.bat
 <ul>
 <li>
 <p>下载对应64位的<a href="http://www.codegood.com/downloads">mysqldb</a>库。 我下的是：<code>MySQL-python-1.2.3.win-amd64-py2.7.exe</code>。
-将下载的安装文件放至env1目录下，在env1目录下(已激活)，通过如下命令安装安装。</p>
+将下载的安装文件放至env1目录下，在env1目录下(已激活)，通过如下命令安装安装，<code>easy_install</code>可以直接安装exe安装文件。</p>
 <div class="highlight"><pre><span class="n">easy_install</span>  <span class="n">MySQL</span><span class="o">-</span><span class="n">python</span><span class="o">-</span><span class="mf">1.2</span><span class="o">.</span><span class="mf">3.</span><span class="n">win</span><span class="o">-</span><span class="n">amd64</span><span class="o">-</span><span class="n">py2</span><span class="o">.</span><span class="mf">7.</span><span class="n">exe</span>
 </pre></div>
 
@@ -121,6 +121,7 @@ activate.bat
 <span class="kn">import</span> <span class="nn">MySQLdb</span> <span class="kn">as</span> <span class="nn">mdb</span>
 
 <span class="n">con</span> <span class="o">=</span> <span class="n">mdb</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s">&#39;localhost&#39;</span><span class="p">,</span> <span class="s">&#39;root&#39;</span><span class="p">,</span> <span class="s">&#39;root&#39;</span><span class="p">,</span> <span class="s">&#39;testdb&#39;</span><span class="p">)</span>
+<span class="c"># 设置utf8参数</span>
 <span class="n">con</span><span class="o">.</span><span class="n">set_character_set</span><span class="p">(</span><span class="s">&#39;utf8&#39;</span><span class="p">)</span>
 
 <span class="k">with</span> <span class="n">con</span><span class="p">:</span>
