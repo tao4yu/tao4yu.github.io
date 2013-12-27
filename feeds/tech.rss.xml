@@ -9,7 +9,7 @@
 &lt;li&gt;mysql5.5&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3&gt;一、建立项目目录&lt;/h3&gt;
-&lt;p&gt;×××&lt;/p&gt;
+&lt;hr /&gt;
 &lt;p&gt;通过如下命令建立项目目录env1，并激活该目录：&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nb"&gt;cd &lt;/span&gt;virtualEnv
 virtualenv   env1
