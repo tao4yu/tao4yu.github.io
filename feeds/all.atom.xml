@@ -30,8 +30,10 @@ easy_install  MySQL-python-1.2.3.win-amd64-py2.7.exe&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;测试是否安装成功，运行命令&lt;code&gt;python&lt;/code&gt;进入隔离环境env1。&lt;/p&gt;
-&lt;p&gt;:::python
-import MySQLdb&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;MySQLdb&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;如果没报错，说明安装成功。&lt;/p&gt;
@@ -90,8 +92,10 @@ easy_install  MySQL-python-1.2.3.win-amd64-py2.7.exe&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;测试是否安装成功，运行命令&lt;code&gt;python&lt;/code&gt;进入隔离环境env1。&lt;/p&gt;
-&lt;p&gt;:::python
-import MySQLdb&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;MySQLdb&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;如果没报错，说明安装成功。&lt;/p&gt;
