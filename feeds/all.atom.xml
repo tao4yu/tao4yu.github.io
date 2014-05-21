@@ -1,5 +1,69 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Tao4Yu</title><link href="http://tao4yu.github.io/" rel="alternate"></link><link href="http://tao4yu.github.io/feeds/all.atom.xml" rel="self"></link><id>http://tao4yu.github.io/</id><updated>2013-12-27T00:00:00+08:00</updated><entry><title>Python MySQLdb Startup</title><link href="http://tao4yu.github.io/pages/2013/12/27/problem_solve.html" rel="alternate"></link><updated>2013-12-27T00:00:00+08:00</updated><author><name>Tao4Yu</name></author><id>tag:tao4yu.github.io,2013-12-27:pages/2013/12/27/problem_solve.html</id><summary type="html">&lt;p&gt;因项目实际需要，须利用Python在MySQl数据库中建立中文的表名及中文字段名（很诡异的需求），出现的各种问题让人头疼(尤其是编码问题)，现将过程记录一下。
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Tao4Yu</title><link href="http://tao4yu.github.io/" rel="alternate"></link><link href="http://tao4yu.github.io/feeds/all.atom.xml" rel="self"></link><id>http://tao4yu.github.io/</id><updated>2014-05-21T00:00:00+08:00</updated><entry><title>Ubuntu 下安装 PySide 至 virtualenv虚拟环境方法</title><link href="http://tao4yu.github.io/pages/2014/05/21/develop_env.html" rel="alternate"></link><updated>2014-05-21T00:00:00+08:00</updated><author><name>Tao4Yu</name></author><id>tag:tao4yu.github.io,2014-05-21:pages/2014/05/21/develop_env.html</id><summary type="html">&lt;p&gt;PySide在Linux 下的安装需依赖一系列的包，尝试直接利用pip或easy_install安装失败，故在此采用编译安装的方法，并采用virtualenv安装至Python虚拟环境， 本文记录整个编译安装过程如下。&lt;/p&gt;
+&lt;hr /&gt;
+&lt;h3&gt;环境：&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Ubuntu 12.04  x64&lt;/li&gt;
+&lt;li&gt;python 2.7&lt;/li&gt;
+&lt;li&gt;virtualenv 1.10&lt;/li&gt;
+&lt;li&gt;pyside 1.2.1&lt;/li&gt;
+&lt;li&gt;virtualenvwrapper 4.1&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;一、安装编译工具库&lt;/h3&gt;
+&lt;hr /&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;sudo apt-get install build-essential cmake libqt4-dev libxml2-dev libxslt1-dev qtmobility-dev
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h3&gt;二、建立虚拟环境&lt;/h3&gt;
+&lt;hr /&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;创建一个虚拟环境&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;mkvirtualenv --no-site-packages env
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;三、编译安装Pyside&lt;/h3&gt;
+&lt;hr /&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;下载并解压Pyside。切换至虚拟境目录env2下（默认在～/.virtualenvs/env2）。&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;&lt;span class="nb"&gt;cd&lt;/span&gt; ～/.virtualenvs/env2
+&lt;span class="nv"&gt;$ &lt;/span&gt;wget https://download.qt-project.org/official_releases/pyside/PySide-1.2.1.tar.gz
+&lt;span class="nv"&gt;$tar&lt;/span&gt; -zxvf PySide-1.2.1.tar.gz
+&lt;span class="nv"&gt;$ &lt;/span&gt;&lt;span class="nb"&gt;cd &lt;/span&gt;PySide-1.2.1
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;编译egg格式二进制包（该过程需持续一段时间）&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;python setup.py bdist_egg --qmake&lt;span class="o"&gt;=&lt;/span&gt;/usr/bin/qmake-qt4
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;安装PySide&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;easy_install dist/PySide-1.2.1-py2.7.egg
+&lt;span class="nv"&gt;$ &lt;/span&gt;python ../bin/pyside_postinstall.py -install
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;验证安装&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;PySide&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt;&lt;span class="k"&gt;print&lt;/span&gt; &lt;span class="n"&gt;PySide&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;__version__&lt;/span&gt;
+&lt;span class="mf"&gt;1.2&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;/li&gt;
+&lt;/ul&gt;</summary></entry><entry><title>Python MySQLdb Startup</title><link href="http://tao4yu.github.io/pages/2013/12/27/problem_solve.html" rel="alternate"></link><updated>2013-12-27T00:00:00+08:00</updated><author><name>Tao4Yu</name></author><id>tag:tao4yu.github.io,2013-12-27:pages/2013/12/27/problem_solve.html</id><summary type="html">&lt;p&gt;因项目实际需要，须利用Python在MySQl数据库中建立中文的表名及中文字段名（很诡异的需求），出现的各种问题让人头疼(尤其是编码问题)，现将过程记录一下。
 开发环境如下：&lt;/p&gt;
 &lt;hr /&gt;
 &lt;ul&gt;
