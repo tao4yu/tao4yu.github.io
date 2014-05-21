@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Tao4Yu</title><link>http://tao4yu.github.io/</link><description></description><atom:link href="http://tao4yu.github.io/feeds/misc.rss.xml" rel="self"></atom:link><lastBuildDate>Wed, 21 May 2014 00:00:00 +0800</lastBuildDate><item><title>Ubuntu 下安装 PySide 至 virtualenv虚拟环境方法</title><link>http://tao4yu.github.io/pages/2014/05/21/develop_env.html</link><description>&lt;p&gt;PySide在Linux 下的安装需依赖一系列的包，尝试直接利用pip或easy_install安装失败，故在此采用编译安装的方法，并采用virtualenv安装至Python虚拟环境， 本文记录整个编译安装过程如下。&lt;/p&gt;
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Tao4Yu</title><link>http://tao4yu.github.io/</link><description></description><atom:link href="http://tao4yu.github.io/feeds/misc.rss.xml" rel="self"></atom:link><lastBuildDate>Wed, 21 May 2014 00:00:00 +0800</lastBuildDate><item><title>Ubuntu 下安装 PySide 至 virtualenv虚拟环境方法</title><link>http://tao4yu.github.io/pages/2014/05/21/develop_env.html</link><description>&lt;p&gt;PySide在Linux 下的安装需依赖一系列的包，尝试直接利用pip或easy_install安装失败，在此采用编译安装的方法，并安装至Python virtualenv虚拟环境， 本文记录整个编译安装过程如下。&lt;/p&gt;
 &lt;hr /&gt;
 &lt;h3&gt;环境：&lt;/h3&gt;
 &lt;ul&gt;
