@@ -33,7 +33,7 @@
 &lt;p&gt;下载并解压Pyside。切换至虚拟境目录env2下（默认在～/.virtualenvs/env2）。&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;&lt;span class="nb"&gt;cd&lt;/span&gt; ～/.virtualenvs/env2
 &lt;span class="nv"&gt;$ &lt;/span&gt;wget https://download.qt-project.org/official_releases/pyside/PySide-1.2.1.tar.gz
-&lt;span class="nv"&gt;$tar&lt;/span&gt; -zxvf PySide-1.2.1.tar.gz
+&lt;span class="nv"&gt;$ &lt;/span&gt;tar -zxvf PySide-1.2.1.tar.gz
 &lt;span class="nv"&gt;$ &lt;/span&gt;&lt;span class="nb"&gt;cd &lt;/span&gt;PySide-1.2.1
 &lt;/pre&gt;&lt;/div&gt;
 
