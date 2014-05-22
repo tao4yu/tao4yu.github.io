@@ -6,7 +6,7 @@
 &lt;li&gt;Ubuntu 12.04  x64&lt;/li&gt;
 &lt;li&gt;python 2.7&lt;/li&gt;
 &lt;li&gt;virtualenv 1.10&lt;/li&gt;
-&lt;li&gt;pyside 1.2.1&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://download.qt-project.org/official_releases/pyside/"&gt;pyside 1.2.1&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;virtualenvwrapper 4.1&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3&gt;一、安装编译工具库&lt;/h3&gt;
